@@ -28,14 +28,15 @@ digital-banking-front/
 ├── angular.json
 ├── package.json
 └── README.md
-✨ Features
+```
+# Features
 User authentication & authorization
 Account management
 Transaction history
 Money transfer operations
 Responsive dashboard
 Secure API communication
-⚙️ Installation
+# ⚙️ Installation
 git clone https://github.com/HajarBoulmane/digital-banking-front.git
 cd digital-banking-front
 npm install
