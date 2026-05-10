@@ -36,7 +36,7 @@ Transaction history
 Money transfer operations
 Responsive dashboard
 Secure API communication
-# ⚙️ Installation
+# Installation
 git clone https://github.com/HajarBoulmane/digital-banking-front.git
 cd digital-banking-front
 npm install
