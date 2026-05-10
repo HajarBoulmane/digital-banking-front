@@ -6,7 +6,6 @@ A modern banking web application built with Angular that allows users to manage 
 - Angular
 - TypeScript
 - Bootstrap / Angular Material
-- RxJS
 - REST API
 - JWT Authentication
 
