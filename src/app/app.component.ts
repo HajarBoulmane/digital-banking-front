@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './services/authentication.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'digital-banking-front';
+export class AppComponent implements OnInit {
+  title="E-Banking"
+  constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {
+    this.authService.loadTokenFromLocalStorage();
+  }
 }

@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Digital Banking</a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/customers">Customers</a>
+      </li>
+      <li class="nav-item"
+          *ngIf="authService.roles.includes('ADMIN')">
+        <a class="nav-link" routerLink="/admin/new-customer">
+          New Customer
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/accounts">Accounts</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link text-warning">
+          {{authService.username}}
+        </a>
+      </li>
+      <li class="nav-item">
+        <button (click)="handleLogout()"
+                class="btn btn-danger btn-sm">
+          Logout
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>

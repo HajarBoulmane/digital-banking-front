@@ -1,0 +1,61 @@
+<div class="container mt-3">
+  <div class="card">
+    <div class="card-body">
+
+      <!-- Formulaire de recherche -->
+      <form [formGroup]="searchFormGroup" (ngSubmit)="handleSearchCustomers()">
+        <div class="input-group mb-3">
+          <label class="input-group-text">Keyword :</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="keyword"
+            placeholder="Search customers...">
+          <button class="btn btn-info" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </form>
+
+      <!-- Tableau des clients -->
+      <table class="table" *ngIf="customers$ | async as listCustomers; else errTemplate">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let c of listCustomers">
+          <td>{{ c.id }}</td>
+          <td>{{ c.name }}</td>
+          <td>{{ c.email }}</td>
+          <td>
+            <!-- Bouton Accounts (vert) -->
+            <button
+              class="btn btn-success btn-sm me-1"
+              (click)="handleCustomerAccounts(c)">
+              Accounts
+            </button>
+            <!-- Bouton Supprimer (rouge) -->
+            <button
+              class="btn btn-danger btn-sm"
+              (click)="handleDeleteCustomer(c)">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <ng-template #errTemplate>
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </div>
+      </ng-template>
+
+    </div>
+  </div>
+</div>
