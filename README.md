@@ -2,14 +2,14 @@
 
 A modern banking web application built with Angular that allows users to manage bank accounts, view transactions, and perform banking operations through a clean and responsive interface.
 
-## 🚀 Tech Stack
+##  Tech Stack
 - Angular
 - TypeScript
 - Bootstrap / Angular Material
 - REST API
 - JWT Authentication
 
-## 📁 Project Structure
+##  Project Structure
 
 ```bash
 digital-banking-front/
