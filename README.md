@@ -52,8 +52,9 @@ Update the API URL in:
 src/environments/environment.ts
 
 Example:
-
+```bash
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:8085'
 };
+```
